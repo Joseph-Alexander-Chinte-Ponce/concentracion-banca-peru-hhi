@@ -1,0 +1,13 @@
+=== Extraccion BCRPData iniciada: 2026-09-19 22:07:13.301095 ===
+Ventana congelada: FECHA_INICIO=2016-1  FECHA_CORTE=2025-12
+2026-09-19 22:07:14 | participacion_creditos lote 0 | HTTP 200 | 120 periodos | 10 series
+2026-09-19 22:07:16 | participacion_creditos lote 1 | HTTP 200 | 120 periodos | 6 series
+2026-09-19 22:07:17 | crecimiento_creditos lote 0 | HTTP 200 | 120 periodos | 10 series
+2026-09-19 22:07:19 | crecimiento_creditos lote 1 | HTTP 200 | 120 periodos | 6 series
+2026-09-19 22:07:21 | utilidad_acumulada lote 0 | HTTP 200 | 120 periodos | 10 series
+2026-09-19 22:07:22 | utilidad_acumulada lote 1 | HTTP 200 | 120 periodos | 6 series
+2026-09-19 22:07:24 | palanca_global lote 0 | HTTP 200 | 120 periodos | 10 series
+2026-09-19 22:07:25 | palanca_global lote 1 | HTTP 200 | 119 periodos | 6 series
+2026-09-19 22:07:27 | tasas_sistema lote 0 | HTTP 200 | 120 periodos | 2 series
+=== Extraccion finalizada: 2026-09-19 22:07:28.046220 ===
+
