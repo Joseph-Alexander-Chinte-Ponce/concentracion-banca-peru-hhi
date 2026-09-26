@@ -1,0 +1,6 @@
+,hhi_mercado,c4_mercado,spread_sistema,tamn_sistema,tipmn_sistema
+hhi_mercado,1.0,0.932,-0.717,-0.772,-0.611
+c4_mercado,0.932,1.0,-0.801,-0.824,-0.594
+spread_sistema,-0.717,-0.801,1.0,0.931,0.511
+tamn_sistema,-0.772,-0.824,0.931,1.0,0.789
+tipmn_sistema,-0.611,-0.594,0.511,0.789,1.0
