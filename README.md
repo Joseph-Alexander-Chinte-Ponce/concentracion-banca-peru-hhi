@@ -28,11 +28,31 @@ Vía única (API), tal como exige la Unidad I:
 
 No se usa clave ni token: la API de BCRPData es de acceso público (ver `.env.example`).
 
+## Estructura del proyecto
+
+```
+proyecto/
+├── codigo/
+│   ├── 01_extraccion_api.py
+│   ├── 03_limpieza_datos.py
+│   └── 04_analisis.py
+├── datos_crudos/        (JSON tal como salen de la API, sin editar)
+├── datos_procesados/    (datos_procesados_2024200494M.csv)
+├── salidas/              (tablas .csv y figuras .png)
+├── diccionario_variables.md
+├── README.md
+├── requirements.txt
+├── .env.example
+└── log_ejecucion.txt
+```
+
+Los tres scripts usan rutas relativas (`pathlib`, `Path(__file__).resolve().parent.parent`): se ejecutan desde `codigo/` y ubican `datos_crudos/`, `datos_procesados/` y `salidas/` un nivel arriba, sin rutas absolutas del computador del estudiante.
+
 ## Orden de ejecución
 
-1. `01_extraccion_api.py` — descarga los datos crudos desde BCRPData y los guarda en `/datos_crudos` (formato JSON, sin editar).
-2. `03_limpieza_datos.py` — limpia, tipifica y une las series en un panel Entidad × Fecha; calcula HHI, C4 y spread; genera `datos_procesados_2024200494M.csv` y su hash SHA-256.
-3. `04_analisis.py` — genera las tablas y figuras de la sección de Resultados del artículo, guardadas en `/salidas`.
+1. `codigo/01_extraccion_api.py` — descarga los datos crudos desde BCRPData y los guarda en `datos_crudos/` (formato JSON, sin editar).
+2. `codigo/03_limpieza_datos.py` — limpia, tipifica y une las series en un panel Entidad × Fecha; calcula HHI, C4 y spread; genera `datos_procesados/datos_procesados_2024200494M.csv` y su hash SHA-256.
+3. `codigo/04_analisis.py` — genera las tablas y figuras de la sección de Resultados del artículo, guardadas en `salidas/`.
 
 No existe un script `02_scraping_web.py` en esta entrega porque, para la Unidad I, la consigna exige solo una vía de extracción automatizada (preferentemente API), y esta es la vía elegida.
 
@@ -53,8 +73,8 @@ Librerías (ver `requirements.txt` para versiones exactas): requests, pandas, nu
 ## Reproducibilidad
 
 Los parámetros `FECHA_INICIO = "2016-1"` y `FECHA_CORTE = "2025-12"` están declarados como
-constantes fijas en `01_extraccion_api.py` (no se usan fechas dinámicas). Los datos crudos
-(`/datos_crudos`) se conservan tal como salen de la fuente, sin editar.
+constantes fijas en `codigo/01_extraccion_api.py` (no se usan fechas dinámicas). Los datos crudos
+(`datos_crudos/`) se conservan tal como salen de la fuente, sin editar.
 
 ## Repositorio
 
